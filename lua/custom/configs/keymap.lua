@@ -25,4 +25,6 @@ vim.keymap.set('n', '<leader>.', function()
   harpoon:list():next()
 end)
 
+-- MCPHub
+vim.keymap.set('n', '<leader>mcp', ':MCPHub<CR>', { desc = '[mcp] open up MCP Hub', silent = true })
 return {}
