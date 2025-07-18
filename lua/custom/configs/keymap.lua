@@ -27,4 +27,14 @@ end)
 
 -- MCPHub
 vim.keymap.set('n', '<leader>mcp', ':MCPHub<CR>', { desc = '[mcp] open up MCP Hub', silent = true })
+
+-- CodeCompanion
+vim.keymap.set('n', '<leader>cc', function()
+  vim.cmd 'CodeCompanionChat Toggle'
+  vim.cmd 'vertical resize 80'
+end, { desc = '[cc] open up CodeCompanionChat and resize', silent = true })
+
+vim.keymap.set('n', '<leader>cl', ':CodeCompanion ', { desc = '[cl] CodeCompanion In-Line' })
+vim.keymap.set('v', 'ga', '<cmd>CodeCompanionChat Add<CR> ', { desc = '[cca] Add visual block to Code Companion Chat' })
+vim.keymap.set('n', '<leader>cm', '<cmd>CodeCompanionActions<CR> ', { desc = '[cm] Open up CodeCompanionActions' })
 return {}

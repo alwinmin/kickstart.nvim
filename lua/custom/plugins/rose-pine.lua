@@ -51,6 +51,13 @@ return {
         h5 = 'pine',
         h6 = 'foam',
       },
+
+      highlight_groups = {
+        -- Comment = { fg = "foam" },
+        SnacksIndentScope = { fg = 'love' },
+        -- VertSplit = { fg = "muted", bg = "muted" },
+        -- Visual = { fg = "base", bg = "text", inherit = false },
+      },
     }
     vim.cmd 'colorscheme rose-pine'
   end,
