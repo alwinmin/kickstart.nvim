@@ -1,6 +1,10 @@
 return {
   'olimorris/codecompanion.nvim',
-  opts = {},
+  opts = {
+    highlight = {
+      enabled = true,
+    },
+  },
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',

@@ -68,4 +68,14 @@ return {
     statuscolumn = { enabled = false },
     words = { enabled = false },
   },
+  keys = {
+    {
+      '<leader>gB',
+      function()
+        Snacks.gitbrowse()
+      end,
+      desc = 'Git Browse',
+      mode = { 'n', 'v' },
+    },
+  },
 }

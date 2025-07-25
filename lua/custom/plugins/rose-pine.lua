@@ -55,6 +55,11 @@ return {
       highlight_groups = {
         -- Comment = { fg = "foam" },
         SnacksIndentScope = { fg = 'love' },
+        CodeCompanionChatTokens = { fg = 'iris', bold = true },
+        CodeCompanionVirtualText = { fg = 'rose' },
+        CodeCompanionChatVariable = { fg = 'rose', bold = true },
+        CodeCompanionChatToolGroup = { fg = 'gold', bold = true },
+        CodeCompanionChatTool = { fg = 'gold', bold = true },
         -- VertSplit = { fg = "muted", bg = "muted" },
         -- Visual = { fg = "base", bg = "text", inherit = false },
       },

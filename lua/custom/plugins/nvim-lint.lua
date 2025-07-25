@@ -9,6 +9,8 @@ return {
 
     lint.linters_by_ft = {
       sh = { 'shellcheck' },
+      -- javascript = { 'eslint' },
+      -- javascriptreact = { 'eslint' }, -- for .jsx files
     }
 
     local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
