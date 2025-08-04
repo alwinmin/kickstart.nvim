@@ -37,4 +37,10 @@ end, { desc = '[cc] open up CodeCompanionChat and resize', silent = true })
 vim.keymap.set('n', '<leader>cl', ':CodeCompanion ', { desc = '[cl] CodeCompanion In-Line' })
 vim.keymap.set('v', 'ga', '<cmd>CodeCompanionChat Add<CR> ', { desc = '[cca] Add visual block to Code Companion Chat' })
 vim.keymap.set('n', '<leader>cm', '<cmd>CodeCompanionActions<CR> ', { desc = '[cm] Open up CodeCompanionActions' })
+
+-- Move highlighted text up and down
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move highlighted text down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move highlighted text up' })
+
+vim.keymap.set('x', '<leader>p', '"_dP', { desc = 'Paste without yanking' })
 return {}

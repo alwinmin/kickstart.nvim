@@ -684,14 +684,14 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-        eslint = {
-          -- cmd = { 'eslint-lsp', '--stdio' },
-          filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
-          capabilities = vim.tbl_deep_extend('force', {}, capabilities, {
-            -- Disable formatting for eslint, since we use `prettier` for that
-            textDocument = { formatting = false },
-          }),
-        },
+        -- eslint = {
+        --   -- cmd = { 'eslint-lsp', '--stdio' },
+        --   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+        --   capabilities = vim.tbl_deep_extend('force', {}, capabilities, {
+        --     -- Disable formatting for eslint, since we use `prettier` for that
+        --     textDocument = { formatting = false },
+        --   }),
+        -- },
         -- ts_ls = {
         --   -- cmd = { 'typescript-language-server', '--stdio' },
         --   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
@@ -733,7 +733,15 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'eslint_d',
-        'prettier',
+        'prettierd',
+        'bashls',
+        'css_variables',
+        'gopls',
+        'pyright',
+        'lua_ls',
+        'ts_ls',
+        'shellcheck',
+        'shfmt',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -788,8 +796,8 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        javascript = { 'prettierd', 'prettier' },
-        javascriptreact = { 'prettierd', 'prettier' },
+        javascript = { 'prettierd' },
+        javascriptreact = { 'prettierd' },
 
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
