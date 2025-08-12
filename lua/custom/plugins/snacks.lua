@@ -67,6 +67,37 @@ return {
     },
     statuscolumn = { enabled = false },
     words = { enabled = false },
+    lazygit = { -- automatically configure lazygit to use the current colorscheme
+      -- and integrate edit with the current neovim instance
+      configure = true,
+      -- extra configuration for lazygit that will be merged with the default
+      -- snacks does NOT have a full yaml parser, so if you need `"test"` to appear with the quotes
+      -- you need to double quote it: `"\"test\""`
+      config = {
+        os = { editPreset = 'nvim-remote' },
+        gui = {
+          -- set to an empty string "" to disable icons
+          nerdFontsVersion = '3',
+        },
+      },
+      -- theme_path = svim.fs.normalize(vim.fn.stdpath 'cache' .. '/lazygit-theme.yml'),
+      -- Theme for lazygit
+      theme = {
+        [241] = { fg = 'Special' },
+        activeBorderColor = { fg = 'MatchParen', bold = true },
+        cherryPickedCommitBgColor = { fg = 'Identifier' },
+        cherryPickedCommitFgColor = { fg = 'Function' },
+        defaultFgColor = { fg = 'Normal' },
+        inactiveBorderColor = { fg = 'FloatBorder' },
+        optionsTextColor = { fg = 'Function', bold = true },
+        searchingActiveBorderColor = { fg = 'MatchParen' },
+        selectedLineBgColor = { bg = 'Visual' },
+        unstagedChangesColor = { fg = 'DiagnosticError' },
+      },
+      win = {
+        style = 'lazygit',
+      },
+    }, -- enable lazygit configuration
   },
   keys = {
     {
@@ -76,6 +107,14 @@ return {
       end,
       desc = 'Git Browse',
       mode = { 'n', 'v' },
+    },
+    {
+      '<leader>gg',
+      function()
+        Snacks.lazygit()
+      end,
+      desc = 'Lazygit',
+      mode = { 'n' },
     },
   },
 }
