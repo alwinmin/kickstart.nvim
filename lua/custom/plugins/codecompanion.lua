@@ -1,5 +1,6 @@
 return {
   'olimorris/codecompanion.nvim',
+  enabled = false,
   opts = {
     highlight = {
       enabled = true,

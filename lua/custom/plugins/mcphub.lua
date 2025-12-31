@@ -3,7 +3,7 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim',
   },
-  build = 'npm install -g mcp-hub@4.2.0', -- Installs `mcp-hub` node binary globally
+  build = 'npm install -g mcp-hub@latest', -- Installs `mcp-hub` node binary globally
   config = function()
     require('mcphub').setup()
   end,
